@@ -192,4 +192,14 @@
         android:icon="@drawable/ic_settings_about"
         android:title="@string/about_settings" />
 
+<!-- UniqueDroid Settings Header Title -->
+    <header android:title="@string/uniquedroid_rom_title" />
+
+<!-- UniqueDroid Settings -->
+    <header
+        android:id="@+id/uniquedroid_settings"
+	android:fragment="com.android.settings.uniquedroid.UniqueDroidSettings"
+        android:title="@string/uniquedroid_rom_settings"
+        android:icon="@drawable/ic_settings_system" />
+
 </preference-headers>

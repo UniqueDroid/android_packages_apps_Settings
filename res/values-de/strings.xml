@@ -1700,4 +1700,174 @@
     <string name="help_label" msgid="1107174367904110532">"Hilfe"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Cell Broadcasts"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Wählen Sie aus, welche Notfallbenachrichtigungen angezeigt werden sollen."</string>
+
+   <!-- UniqueDroid-Settings-Info -->
+    <string name="mod_version">UniqueDroid Version</string>
+    <string name="build_date">Build-Datum</string>
+
+ <!-- UniqueDroid ROM Settings -->
+    <string name="uniquedroid_rom_title">UniqueDroid ROM</string>
+    <string name="uniquedroid_rom_settings">ROM Einstellungen</string>
+    <string name="uniquedroid_settings_title">ROM Einstellungen</string>
+    <string name="uniquedroid_settings_category_title">Extra ROM Einstellungen</string>
+
+    <string name="uniquedroid_displaycolor_settings_summary">Farbmultiplikator / Gammakorrektur</string>
+    <string name="uniquedroid_powerwidget_settings_summary">Einstellungen für das Widget in der Benachrichtigungsanzeige</string>
+    <string name="uniquedroid_statusbar_settings_summary">Uhr, Anzeigestil des Batteriestatus, Anzeige der Mobilfunk-Signalstärke</string>
+    <string name="uniquedroid_performance_settings_summary">CPU-Regelung und Taktfrequenzen, Speicherverwaltung</string>
+
+    <string name="uniquedroid_settings_category_info_title">Information</string>
+
+    <!-- Display Color Settings -->
+    <string name="display_color_settings_title">Display Farbeinstellungen</string>
+
+ <!-- Performance settings -->
+    <string name="performance_settings_title">Leistung</string>
+
+    <!-- Performance Settings : Processor Settings -->
+    <!-- Performance Settings : Processor settings title -->
+    <string name="processor_title">Prozessor</string>
+    <!-- Performance Settings : Processor settings summary. -->
+    <string name="processor_summary">CPU-Regelung und Taktfrequenzen</string>
+
+    <!-- Performance Settings : Processor settings sub items -->
+    <string name="cpu_cur_freq_title">Aktuelle CPU-Frequenz</string>
+    <string name="cpu_governors_title">CPU-Regler</string>
+    <string name="cpu_governors_summary">%S</string>
+    <string name="cpu_min_freq_title">Minimale CPU-Frequenz</string>
+    <string name="cpu_min_freq_summary">%s</string>
+    <string name="cpu_max_freq_title">Maximale CPU-Frequenz</string>
+    <string name="cpu_max_freq_summary">%s</string>
+    <string name="cpu_set_on_boot">Beim Booten einstellen</string>
+    <string name="cpu_set_on_boot_summary">Prozessoreinstellungen beim Bootvorgang wiederherstellen</string>
+
+    <!-- Memory Management -->
+    <string name="memory_management_title">Speicherverwaltung</string>
+    <string name="memory_management_summary">Speichernutzung anpassen, um Systemleitung zu modifizieren</string>
+    <!-- zRam -->
+    <string name="pref_zram_title">zRam</string>
+    <string name="pref_zram_summary">Speicherinhalte für mehr virtuellen Speicher mit zRAM komprimieren (Neustart erforderlich)</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Kernel Samepage Merging</string>
+    <string name="pref_ksm_summary">KSM verringert den Speicherbedarf und erhöht die Leistung.</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">Freigabe von Ressourcen</string>
+    <string name="pref_purgeable_assets_summary">Erlaubt dem System, Speicherbereiche von nicht mehr benutzten Bildern freizugeben, um mehr RAM bereitzustellen (Neustart erforderlich)</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">Dithering</string>
+    <string name="pref_use_dithering_summary">Dithering von Oberflächen verbessert die Bildqualität auf Kosten der Geräteleistung (Neustart erforderlich)</string>
+
+    <!-- Performance Settings : 16bpp Alpha -->
+    <string name="pref_use_16bpp_alpha_title">16-bit-Transparenz</string>
+    <string name="pref_use_16bpp_alpha_summary">Verwenden der 16-bit-Transparenz kann die Performance beim Scrollen verbessern, aber Grafikfehler verursachen (Neustart erforderlich)</string>
+
+
+<!-- Device Settings : Color/ Gamma Tuning -->
+    <string name="color_tuning_title_head">Farbmultiplikator</string>
+    <string name="color_tuning_summary_head">Farbmultiplikator einstellen</string>
+    <string name="gamma_tuning_title_head">Gammakorrektur</string>
+    <string name="gamma_tuning_summary_head">Gammawert einstellen</string>
+    <string name="color_red_title">Rot</string>
+    <string name="color_green_title">Grün</string>
+    <string name="color_blue_title">Blau</string>
+    <string name="device_settings_title">Display Farbeinstellungen</string>
+    <string name="color_presets_title_head">Farb-Voreinstellungen</string>
+    <string name="color_presets_summary_head">Voreinstellungen für Gammakorrektur und Farbmultiplikator</string>
+    <string name="gamma_default_title">Standard</string>
+    <string name="gamma_CM_title">UD</string>
+    <string name="gamma_bright_title">Hell</string>
+    <string name="color_default_title">Standard</string>
+    <string name="color_CM_title">UD</string>
+    <string name="color_dark_title">Dunkel</string>
+    <string name="gamma_dss_title">DSS Gammawert</string>
+
+    <string name="preset1_default_title">Standard</string>
+    <string name="preset2_default_title">Natürlich</string>
+    <string name="preset3_default_title">Dunkles Blau</string>
+    <string name="preset4_default_title">Warm</string>
+    <string name="preset5_default_title">Kalt</string>
+    <string name="preset6_default_title">X-Processing</string>
+
+    <!-- System Interface settings -->
+    <string name="system_settings_title">Statusleiste/ Energie-Widget</string>
+    <string name="system_interface_title">Statusleiste/ Energie-Widget</string>
+
+    <!-- Notification Drawer -->
+    <string name="notification_drawer_title">Energie-Widget</string>
+
+    <!-- Combined Bar -->
+    <string name="combined_bar_title">Kombinierte Leiste</string>
+    <string name="combined_bar_auto_hide_title">Automatisch verstecken</string>
+    <string name="combined_bar_auto_hide_summary">Erlaube es der kombinierten Leiste sich zu verstecken, wenn eine Vollbild-App gezeigt wird</string>
+
+    <!-- Power Widget -->
+    <string name="power_widget_title">Energie-Widget</string>
+    <string name="title_expanded_widget">Benachr.-Energiesteuerung</string>
+    <string name="summary_expanded_widget">Schaltflächen für Energiesteuerung in aufgeklappter Benachrichtigungsanzeige</string>
+    <string name="title_expanded_hide_onchange">Nach Änd. verbergen</string>
+    <string name="summary_expanded_hide_onchange">Die Benachrichtigungsanzeige sofort wieder verbergen, nachdem eine Änderung an der Energiesteuerung vorgenommen wurde</string>
+    <string name="title_expanded_hide_indicator">Status verstecken</string>
+    <string name="summary_expanded_hide_indicator">Verstecke die Statusanzeige unter den Schaltflächen</string>
+    <string name="title_expanded_hide_scrollbar">Scrollbar verstecken</string>
+    <string name="summary_expanded_hide_scrollbar">Die Scrollbar verstecken, wenn mehr Schaltflächen vorhanden sind als maximal möglich</string>
+    <string name="title_widget_picker">Schaltflächen</string>
+    <string name="summary_widget_picker">Schaltflächen auswählen, die angezeigt werden sollen</string>
+    <string name="title_widget_order">Reihenfolge</string>
+    <string name="summary_widget_order">Die Schaltflächen anordnen bzw. umsortieren</string>
+    <string name="title_buttons">Schaltflächen</string>
+    <string name="title_toggle_wifi">WLAN</string>
+    <string name="title_toggle_bluetooth">Bluetooth</string>
+    <string name="title_toggle_gps">GPS</string>
+    <string name="title_toggle_sound">Klingelmodus</string>
+    <string name="title_toggle_brightness">Helligkeit</string>
+    <string name="title_toggle_sync">Synchronisierung</string>
+    <string name="title_toggle_wifiap">WLAN-Hotspot</string>
+    <string name="title_toggle_screentimeout">Bildschirm-Timeout</string>
+    <string name="title_toggle_mobiledata">Mobilfunk-Daten</string>
+    <string name="title_toggle_lockscreen">Bildschirmsperre</string>
+    <string name="title_toggle_networkmode">2G/3G</string>
+    <string name="title_toggle_autorotate">Autom. Ausrichtung</string>
+    <string name="title_toggle_airplane">Flugmodus</string>
+    <string name="title_toggle_sleep">In Standby wechseln</string>
+    <string name="title_toggle_media_play_pause">Medien: Play/Pause</string>
+    <string name="title_toggle_media_previous">Medien: Vorheriger Titel</string>
+    <string name="title_toggle_media_next">Medien: Nächster Titel</string>
+    <string name="title_button_modes">Schaltflächenfunktionen</string>
+    <string name="pref_brightness_mode_title">Helligkeitsstufen</string>
+    <string name="pref_brightness_mode_summary">Helligkeitsstufen, zwischen denen umgeschaltet wird</string>
+    <string name="cm_brightness_mode_auto">Auto</string>
+    <string name="cm_brightness_mode_dim">Dunkel</string>
+    <string name="pref_network_mode_title">Netzwerkmodi</string>
+    <string name="pref_network_mode_summary">Netzwerkmodi, zwischen denen umgeschaltet wird</string>
+    <string name="pref_screentimeout_mode_title">Bildschirm-Timeout</string>
+    <string name="pref_screentimeout_mode_summary">Auswählbare Timeouts für automatische Bildschirmabschaltung</string>
+    <string name="pref_ring_mode_title">Klingelmodi</string>
+    <string name="pref_ring_mode_summary">Klingelmodi, zwischen denen umgeschaltet wird</string>
+    <string name="cm_sound_mode_silent">Lautlos</string>
+    <string name="cm_sound_mode_vibrate">Vibration</string>
+    <string name="cm_sound_mode_sound">Ton</string>
+    <string name="cm_sound_mode_soundVibrate">Ton+Vibration</string>
+
+    <!-- Status bar -->
+    <string name="status_bar_title">Statusleiste</string>
+    <string name="status_bar_clock_title">Uhrzeit</string>
+    <string name="status_bar_general_title">Allgemein</string>
+    <string name="status_bar_show_clock_title">Zeige Uhr</string>
+    <string name="status_bar_show_clock_summary">Die Uhrzeit wird nicht angezeigt, wenn deaktiviert</string>
+    <string name="status_bar_battery_title">Batteriestatus</string>
+    <string name="status_bar_battery_summary">Anzeigestil des Batteriestatus</string>
+    <string name="status_bar_toggle_brightness">Helligkeitsregler</string>
+    <string name="status_bar_toggle_brightness_summary">Änderung der Helligkeit durch Wischen über die Statusleiste</string>
+    <string name="status_bar_toggle_info">Automatische Helligkeit ist aktiviert</string>
+    <string name="status_bar_signal_text_title">Signalstärke in dBm</string>
+    <string name="status_bar_signal_text_summary">Anzeige der Mobilfunk-Signalstärke in dBm statt der Balkenanzeige</string>
+    <string name="status_bar_signal_text_show_bars">Nur Balken</string>
+    <string name="status_bar_signal_text_show_text">Signalstärke (nur Wert)</string>
+    <string name="status_bar_signal_text_hidden">Versteckt</string>
+
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">JIT verwenden</string>
+    <string name="pref_jit_mode_summary">Den Dalvik-Just-In-Time-Compiler verwenden (Neustart erforderlich)</string>
+
 </resources>

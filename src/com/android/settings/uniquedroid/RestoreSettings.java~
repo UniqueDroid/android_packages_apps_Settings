@@ -1,0 +1,96 @@
+package com.android.settings.uniquedroid;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.SystemProperties;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+import com.android.settings.Utils;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class RestoreSettings extends BroadcastReceiver {
+
+    private static final String TAG = "UniqueDroid ROM Restore Settings";
+    private static final String CPU_SETTINGS_PROP = "sys.cpufreq.restored";
+    private static final String KSM_SETTINGS_PROP = "sys.ksm.restored";
+
+    @Override
+    public void onReceive(final Context context, final Intent intent) {
+
+	ColorTuningPreference.restore(context);
+        GammaTuningPreference.restore(context);
+	Log.d(TAG, "Display color settings restored.");
+
+        if (SystemProperties.getBoolean(CPU_SETTINGS_PROP, false) == false
+                && intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+            SystemProperties.set(CPU_SETTINGS_PROP, "true");
+            configureCPU(context);
+        } else {
+            SystemProperties.set(CPU_SETTINGS_PROP, "false");
+        }
+
+        if (Utils.fileExists(MemoryManagement.KSM_RUN_FILE)) {
+            if (SystemProperties.getBoolean(KSM_SETTINGS_PROP, false) == false
+                    && intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
+                SystemProperties.set(KSM_SETTINGS_PROP, "true");
+                configureKSM(context);
+            } else {
+                SystemProperties.set(KSM_SETTINGS_PROP, "false");
+            }
+        }
+    }
+
+    private void configureCPU(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        if (prefs.getBoolean(Processor.SOB_PREF, false) == false) {
+            Log.i(TAG, "CPU settings restore disabled by user preference.");
+            return;
+        }
+
+        String governor = prefs.getString(Processor.GOV_PREF, null);
+        String minFrequency = prefs.getString(Processor.FREQ_MIN_PREF, null);
+        String maxFrequency = prefs.getString(Processor.FREQ_MAX_PREF, null);
+        String availableFrequenciesLine = Utils.fileReadOneLine(Processor.FREQ_LIST_FILE);
+        String availableGovernorsLine = Utils.fileReadOneLine(Processor.GOV_LIST_FILE);
+        boolean noSettings = ((availableGovernorsLine == null) || (governor == null)) &&
+                             ((availableFrequenciesLine == null) || ((minFrequency == null) && (maxFrequency == null)));
+        List<String> frequencies = null;
+        List<String> governors = null;
+
+        if (noSettings) {
+            Log.d(TAG, "No CPU settings saved. Nothing to restore.");
+        } else {
+            if (availableGovernorsLine != null){
+                governors = Arrays.asList(availableGovernorsLine.split(" "));
+            }
+            if (availableFrequenciesLine != null){
+                frequencies = Arrays.asList(availableFrequenciesLine.split(" "));
+            }
+            if (governor != null && governors != null && governors.contains(governor)) {
+                Utils.fileWriteOneLine(Processor.GOV_FILE, governor);
+            }
+            if (maxFrequency != null && frequencies != null && frequencies.contains(maxFrequency)) {
+                Utils.fileWriteOneLine(Processor.FREQ_MAX_FILE, maxFrequency);
+            }
+            if (minFrequency != null && frequencies != null && frequencies.contains(minFrequency)) {
+                Utils.fileWriteOneLine(Processor.FREQ_MIN_FILE, minFrequency);
+            }
+            Log.d(TAG, "CPU settings restored.");
+        }
+    }
+
+    private void configureKSM(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        boolean ksm = prefs.getBoolean(MemoryManagement.KSM_PREF, false);
+
+        Utils.fileWriteOneLine(MemoryManagement.KSM_RUN_FILE, ksm ? "1" : "0");
+        Log.d(TAG, "KSM settings restored.");
+    }
+}

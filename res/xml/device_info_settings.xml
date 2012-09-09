@@ -17,13 +17,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <!-- System update settings - launches activity -->
+        <!-- System update settings - launches activity
         <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title" 
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
         </PreferenceScreen>
-
+	-->
 
         <PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">
@@ -100,12 +100,6 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
-
-        <!-- Device FCC equipment id -->
-        <Preference android:key="fcc_equipment_id"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/fcc_equipment_id"
-                android:summary="@string/device_info_default"/>
                 
         <!-- Device Baseband version -->
         <Preference android:key="baseband_version" 
@@ -124,5 +118,17 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
+
+ 	<!-- Mod version -->
+        <Preference android:key="mod_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/mod_version"
+                android:summary="@string/mod_version_default" />
+
+        <!-- Mod build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
 
 </PreferenceScreen>

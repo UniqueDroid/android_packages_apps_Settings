@@ -1438,7 +1438,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.app.action.START_ENCRYPTION" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.CryptKeeperSettings" />
@@ -1461,6 +1461,10 @@
                 android:resource="@id/wireless_settings" />
         </activity>
 
+        <!-- UniqueDroid activities Start -->
+        <activity android:name=".uniquedroid.UniqueDroidSettings" />
+	<!-- UniqueDroid activities End -->
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"
@@ -1476,6 +1480,12 @@
                 <action android:name="com.android.sync.SYNC_CONN_STATUS_CHANGED" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info" />
+        </receiver>
+
+        <receiver android:name=".uniquedroid.RestoreSettings" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
         </receiver>
 
     </application>
